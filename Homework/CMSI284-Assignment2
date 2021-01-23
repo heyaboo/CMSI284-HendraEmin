@@ -1,0 +1,45 @@
+Emin Torlic and Hendra Wijaya
+CMSI284 Assignment 2
+
+1. A computer system is a set of layered tasks. Each layer carries out tasks and passes it onto the next one above it. For instance, when a machine completes its tasks, it will pass on to the layer above it (system software) and then high-level language takes over the tasks and works on them.
+
+2. Part of a computer system is the input and output hardware which allows the system to do tasks that were instructed to them. For instance, to display a set of words onto a computer screen, an input is required, which in this case is the keyboard.
+
+3. A compiled language is a programming language that needs to run through a compiler to be translated into codes that aren't readable to humans, they are supposed to be passed onto the machine to be run. For instance: c and c++. Whereas interpreted language is interpreted programming language that does not need to be translated into machine instructions as they are not run by machines, but by other programs. Examples of these are: Python, JavaScript and Java.
+
+4. Yes, C is a compiled language.
+
+5. C was invented by Dennis Ritchie.
+
+6. C has been in use since 1989.
+
+7. Yes, a compiler is a translator as it translates human readable code (high-level language) into machine codes (low level language).
+
+8. Yes, an assembler is a translator, except they are used to translate assembly language.
+
+9. You can use ls for a list of all directories or ls -l for a list of directories with more information.
+
+10. atof() is used in C to convert string type to float numerical values.
+
+11. The bottom 2 layers of a computer systems:
+ i.  Digital logic (level 0) --> the hardware that all computers run on. They are our gates, circuitry, motherboards, daughterboards chips and so on.
+ii. Control (level 1) --> They are the microcode that are used by the hardware. They can be carried out using firmwares and sometimes by hardwiring components in the system.
+
+12. The Von Neumann Architecture consists of a Central Processing Unit (CPU), main memory, and Input/Output Interfaces (I/O). The three steps are fetching program instruction from memory, decode the fetched instruction, and finally executes the decoded instruction.
+
+13. An arithmetic-logic unit (ALU) is the part of a CPU that carries out arithmetic and logic operations on the operands in computer instruction words.
+
+14. A register is a small unit in a computer that can store any instructions, address or data for processor operation. Registers are integral to successfully run and execute computer tasks.
+
+15. Application software is written for humans (high-level language), whereas system software is machine code (low-level language).
+
+16. No, they are assembly language.
+
+17. There are three buses in the system bus: the data, address, and control buses.
+
+18. 100101112 = (1 x 27) + (0 x 26) + (0 x 25) + (1 x 24) + (0 x 23)  + (1 x 22) + (1 x 21) + (1 x 20) = 128 + 0 + 0 + 16 + 0 + 4 + 2 + 1 = 15110
+
+19. 111111112 =  (1 x 27) + (1 x 26) + (1 x 25) + (1 x 24) + (1 x 23)  + (1 x 22) + (1 x 21) + (1 x 20) = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 25510
+
+20. The largest unsigned integer value that fits into 16 bits is 65535
+
