@@ -1,0 +1,38 @@
+
+
+Evaluation Criteria ~ homework01
+CMSI 284 Section 02 Spring 2021
+=================================
+
+SAYHELLO.C
+   file exists          1/1 pt.
+   file compiles        1/1 pt.
+   program runs         1/1 pt.
+   prompts user         1/1 pt.
+   reads input          1/1 pt.
+   displays hello name  1/1 pt.
+SAYHELLO.ASM
+   file exists          0/1 pt.
+   file assembles       0/1 pt.
+   programruns          0/1 pt.
+GENERAL
+   code style           1/1 pt.
+
+Total possible points: 7
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned ??/10 which is ???% which is an ???
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+I made a copy of your code from the "CMSI284-Assignment1" file into a file
+named "sayhello.c" so that I could run it.  It's all good.
+
+I don't see, however, your assembly code for this assignment.  I'll hold off
+on the final evaluation until that shows up, to give you a shot at it.
+
+I hope you have everything working!
+
