@@ -53,27 +53,37 @@
      -> 2^n - 1 (since this is 20 bit registers then -> 2^20 - 1 = -1048575
     
     19. The modular sum of 16-bit hex values 3511 + 4FFC is:
-     -> 
+     -> 850D
     
     20. The saturated sum of 16-bit hex values 3511 + 4FFC is:
+     -> 850D
     
     21. The 16-bit operation 3511 + 4FFC has a carry (Y or N):
+     -> N, last hex code in the addition is 8, which is still inside the 16-bit range.
     
     22. The 16-bit operation 3511 + 4FFC has a overflows (Y or N):
+     -> 
     
     23. The modular sum of 16-bit hex values 6159 + F702 is:
+     -> 1585B
     
     24. The saturated sum of 16-bit hex values 6159 + F702 is:
+     -> 
     
     25. The 16-bit operation 6159 + F702 has a carry (Y or N):
+     -> Y
     
     26. The 16-bit operation 6159 + F702 has a overflows (Y or N):
+     -> 
     
     27. The modular sum of 16-bit hex values EEEE + C00C is:
+     -> 1AEFA
     
     28. The saturated sum of 16-bit hex values EEEE + C00C is:
+     -> 
     
     29. The 16-bit operation 9EEE + AB0C has a carry (Y or N):
+     ->
     
     30. The 16-bit operation 9EEE + AB0C has a overflows (Y or N):
     
