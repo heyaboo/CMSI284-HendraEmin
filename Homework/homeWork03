@@ -1,0 +1,111 @@
+    1. Hex FAC3 in binary is:
+      -> 111101011000011
+    
+    2. Hex FAC3 as an unsigned decimal is:
+      -> -64195
+    
+    3. Hex FAC3 as a signed decimal is:
+     -> 64195
+    
+    4. Hex 0064 in binary is:
+     -> 0000000001100100
+    
+    5. Hex 0064 as an unsigned decimal is:
+     -> 94 + 4 = 100
+    
+    6. Hex 0064 as a signed decimal is:
+     -> -100
+    
+    7. Hex 8000 in binary is:
+     -> 1000000000000000
+    
+    8. Hex 8000 as an unsigned decimal is:
+     -> 32768
+    
+    9. Hex 8000 as a signed decimal is:
+     -> 32768
+    
+    10. Decimal 8000 encoded in 16-bits (unsigned) is in hex:
+     -> 1 15 4 0 -> 1F40
+    
+    11. Decimal 8000 encoded in 16-bits (signed) is in hex:
+     -> -1F40 
+    
+    12. Decimal -11 encoded in 16-bits (signed) is in hex:
+     -> -B
+    
+    13. Decimal -32717 encoded in 16-bits (signed) is in hex:
+     -> 7 15 12 13 -> -7FCD
+    
+    14. Binary 10111101 in hex is:
+     -> 1011 1101 -> BD
+    
+    15. Binary 1011110100000001 as an unsigned decimal is:
+     -> binary codes are base 2s -> 48385
+    
+    16. Binary 1011110100000001 as a signed decimal is:
+     -> -48385
+    
+    17. If we had 20-bit registers, the smallest signed decimal value would be:
+     -> -20
+    
+    18. If we had 20-bit registers, the largest signed decimal value would be:
+     -> 2^n - 1 (since this is 20 bit registers then -> 2^20 - 1 = -1048575
+    
+    19. The modular sum of 16-bit hex values 3511 + 4FFC is:
+     -> 
+    
+    20. The saturated sum of 16-bit hex values 3511 + 4FFC is:
+    
+    21. The 16-bit operation 3511 + 4FFC has a carry (Y or N):
+    
+    22. The 16-bit operation 3511 + 4FFC has a overflows (Y or N):
+    
+    23. The modular sum of 16-bit hex values 6159 + F702 is:
+    
+    24. The saturated sum of 16-bit hex values 6159 + F702 is:
+    
+    25. The 16-bit operation 6159 + F702 has a carry (Y or N):
+    
+    26. The 16-bit operation 6159 + F702 has a overflows (Y or N):
+    
+    27. The modular sum of 16-bit hex values EEEE + C00C is:
+    
+    28. The saturated sum of 16-bit hex values EEEE + C00C is:
+    
+    29. The 16-bit operation 9EEE + AB0C has a carry (Y or N):
+    
+    30. The 16-bit operation 9EEE + AB0C has a overflows (Y or N):
+    
+    31. The negation of 16-bit word B00F is:
+    
+    32. The negation of 16-bit word 2232 is:
+    
+    33. The negation of 16-bit word 8000 is:
+    
+    34. The negation of 32-bit word FFF329BA is:
+    
+    35. The largest finite IEEE-754 single precision float, in hex is:
+    
+    36. The smallest finite IEEE-754 single precision float, in hex is:
+    
+    37. The largest nonzero negative IEEE-754 single precision float, in hex is:
+    
+    38. The smallest nonezero positive IEEE-754 single precision float, in hex is:
+    
+    39. -5.125 X 290 as a 32-bit float, in hex is:
+    
+    40. 96.03125 as a 32-bit float, in hex is:
+    
+    41. 2-138 as a 32-bit float, in hex is:
+    
+    42. 1.5 X 2-143 as a 32-bit float, in hex is:
+    
+    43. -16777216 as a 32-bit float, in hex is:
+    
+    44. Hex 43700000, when iterpreted as an IEEE-754 pattern, is in decimal:
+    
+    45. Hex C0FF0000, when iterpreted as an IEEE-754 pattern, is in decimal:
+    
+    46. Hex C059000000000000, when iterpreted as an IEEE-754 pattern, is in decimal:
+    
