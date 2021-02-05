@@ -2,10 +2,10 @@
       -> 111101011000011
     
     2. Hex FAC3 as an unsigned decimal is:
-      -> -64195
+      -> 64195
     
     3. Hex FAC3 as a signed decimal is:
-     -> 64195
+     -> -1341
     
     4. Hex 0064 in binary is:
      -> 0000000001100100
@@ -23,7 +23,7 @@
      -> 32768
     
     9. Hex 8000 as a signed decimal is:
-     -> 32768
+     -> 
     
     10. Decimal 8000 encoded in 16-bits (unsigned) is in hex:
      -> 1 15 4 0 -> 1F40
@@ -53,9 +53,11 @@
      -> 2^n - 1 (since this is 20 bit registers then -> 2^20 - 1 = -1048575
     
     19. The modular sum of 16-bit hex values 3511 + 4FFC is:
+       //ignore carry
      -> 850D
     
     20. The saturated sum of 16-bit hex values 3511 + 4FFC is:
+       // if number exceeds a 16-bit, then saturated sum would be the highest value that 16-bit can hold.
      -> 850D
     
     21. The 16-bit operation 3511 + 4FFC has a carry (Y or N):
