@@ -1,3 +1,5 @@
+    /*
+    
     1. Hex FAC3 in binary is:
       -> 111101011000011
     
@@ -106,24 +108,32 @@
      -> 0x4059C7DC
     
     36. The smallest finite IEEE-754 single precision float, in hex is:
+     -> 0x3DCCCCCD
     
     37. The largest nonzero negative IEEE-754 single precision float, in hex is:
+     ->
     
     38. The smallest nonezero positive IEEE-754 single precision float, in hex is:
     
     39. -5.125 X 290 as a 32-bit float, in hex is:
     
     40. 96.03125 as a 32-bit float, in hex is:
+     -> 0xC2C01000
     
     41. 2-138 as a 32-bit float, in hex is:
     
     42. 1.5 X 2-143 as a 32-bit float, in hex is:
     
     43. -16777216 as a 32-bit float, in hex is:
+     -> 0xCB800000
     
     44. Hex 43700000, when iterpreted as an IEEE-754 pattern, is in decimal:
+     -> 240
     
     45. Hex C0FF0000, when iterpreted as an IEEE-754 pattern, is in decimal:
+     -> -7.96875
     
     46. Hex C059000000000000, when iterpreted as an IEEE-754 pattern, is in decimal:
+     -> -100.0
     
+*/
