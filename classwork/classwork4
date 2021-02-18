@@ -1,0 +1,16 @@
+        JMP     start
+fib1:   0
+fib2:   1
+result: 0
+limit:  55
+start:  LOAD    fib1
+        WRITE   255
+        ADD     fib2
+        STORE   result
+        LOAD    fib2
+        STORE   fib1
+        LOAD    result
+        STORE   fib2
+        SUB     limit
+        JLZ     start
+end:    JMP     end
