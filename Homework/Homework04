@@ -1,0 +1,134 @@
+Question 1:
+
+x: = A or (B and C)
+y: =  A nand (B nand C)
+
+Question 2: (I have sent a separate attachment via email to you, professor.
+
+Question 3:  (I am assuming each part is not related to one another, that’s why I don’t know if I am doing it right?)
+
+C0000003    [ jump to address, start of program]
+00000001    [Load A with data value; ‘start’]
+000010C6   [Load A with data value; ‘limit’]
+40000001    [Add value to A]
+10000001    [Store value at original address]
+F0000082    [If applying modulo operand onto a 2 and the result is zero..]
+50000001    [then subtract the number]
+40000001    [Continue adding the numbers]
+50000002    [subtract limit?]
+E0000003    [If result is less than zero, jump to 0x0000003]
+	C0000009   [Stop]
+
+C0000003  [Load to address, start of program]
+00000001  [Load A with data value; ‘start’]
+00000008  [3 bits max value = 8? So the limit is 8?]
+10000002  [Store another data value on another address]
+10000004  [Store the last bit of data]
+50000002    [subtract limit?]
+E0000003    [If result is less than zero, jump to 0x0000003]
+	C0000009   [Stop]
+
+C0000003   [ jump to address, start of program]
+00000001    [Load A with data value; ‘start’]
+000010C6   [Load A with data value; ‘limit’]
+40000001    [Add value to A]
+10000001    [Store value to address 0x0000001]
+70000008    [Divide number in address by 8]
+80000001    [Compute remainder using modulo]
+10000001    [store the result where data was first stored]
+50000002    [subtract limit?]
+E0000003    [If result is less than zero, jump to 0x0000003]
+	C0000009   [Stop]
+
+
+C0000003   [ jump to address, start of program]
+00000001    [Load A with data value; ‘start’]
+	50000002    [ Assuming data value is 1, we subtract 2 to get -1? ]
+	10000001    [Store value to address 0x0000001]
+	C0000009   [Stop]
+
+C0000003   [ jump to address, start of program]
+	00000001   [Load A with data value; ‘start’]
+	B0000020   [XOR the 32th bit to complement it]
+      B000001F   [XOR the 31st bit to complement it]
+      10000001   [Store value to address 0x0000001]
+      C0000009   [Stop]
+
+C0000003   [jump to address, start of program]
+	00000001   [Load A with data value; ‘start’]
+4FFFFFFF   [Let A be the largest possible value]
+80000008   [Modulo A by 8 to get the remainder]
+10000001   [Store A to port 0x0000001]
+50000001   [Subtract the accumulator by the stored value at 0x0000001]
+10000001   [Store the new value to port 0x0000001]
+C0000009   [Stop]
+
+Question 4:
+
+JMP	   Start
+
+fib1:	   0
+fib2:    1
+result:  0
+limit :  255
+start:   LOAD      fib1
+WRITE    255
+ADD      fib2
+STORE    fib1
+LOAD     result
+JLZ	   start
+end:	   JUMP	 end
+
+
+Question 5:
+
+C0000003	; jump start
+00000001	; store data value
+000000FF	; limit of 255 , ff = 255
+00000001       ; load value
+300000FF	; write limit of 255
+00000002	; load fib2?
+40000002	; add fib1 with fib2?
+10000001    ; store value
+50000002	;subtract to limit
+E0000003	;if limit hasn’t been passed, do the addition again
+C0000009	;end the program
+
+Question 6:   (I decided to go with 40 and 60 for our 2 numbers)
+
+JMP	  Start
+
+fib1:	   40
+fib2:    60
+result:  0
+Limit :  40 
+start:   LOAD      fib1
+WRITE:   40
+DIV:	   5
+SUB:	   limit
+STORE:   fib1
+start    LOAD:    fib2
+DIV:     5
+STORE:   fib2
+SUB:     limit
+SUB:     fib1
+JLZ	   start   ( ← how to compare the 2 var for the GCD, 20 in answer)
+JUMP	   end
+
+QUESTION 7:
+var1:    12458
+var2:    LOAD
+STORE:   var1
+var1:    JMP:    var2
+var2:    LOAD    
+
+QUESTION 8:
+var1:    137870305
+JGZ:     var1
+
+
+Question 9:
+Part 1: Variables r8 and r9 will have switched their values with each other using the XOR command.
+
+Part 2: This happens because when r8 XOR r9 is stored, r8 gets put in the other register. The r8 in the other register is used to change r8 XOR r9 to r9.
+
