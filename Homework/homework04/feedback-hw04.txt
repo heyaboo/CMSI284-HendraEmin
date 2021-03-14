@@ -1,0 +1,180 @@
+
+
+Evaluation Criteria ~ homework04
+CMSI 284 Section 02 Spring 2021
+=================================
+
+LOGIC DESIGN
+   Logic Question 1a         10/10
+   Logic Question 1b          5/ 5
+   Logic Question 2          10/10
+
+REGISTER OPERATIONS
+   Register clear even        2/ 2
+   Register set last 3        2/ 2
+   Reg./8 remainder           2/ 2
+   Reg. set to -1             2/ 2
+   Reg. invert 2 MSBs         2/ 2
+   Register computation       2/ 2
+
+STANLEY/PENGUIN ASSEMBLY
+   Q4 - program 1a           10/11
+   Q5 - program 1b           10/11
+   Q6 - GCD prog.             9/11
+   Q7 - swap frag             4/ 5
+   Q8 - jmp to addr           3/ 5
+
+REGISTER INVESTIGATION
+   Q9a - high level expl.     5/ 5
+   Q9b - Why?                 5/ 5
+
+
+Total possible points        90 points
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 83.0/90.0 which is 92.22% which is an A-minus
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+Nice work here!
+
+For problem 3, I sent you two a long e-mail describing what the intent of
+the problem is, and how to go about solving it.  I'm copying and pasting it
+below so you have it easily available.  I'm actually inclined to have you
+earn full credit for your solution, though, because it is so complete, using
+Stanley/Penguin code to solve the problem.  That was a LOT of work, and I
+want to acknowledge your effort, even though it wasn't what the problem was
+intended to do.
+
+For problem 4, you are ALMOST there.  Remember that you need to shift BOTH
+numbers so that you are adding new values each time.  This means you need to
+keep track of the RESULT value as well as the two numbers.  You move the
+second number into the first spot, but you don't put the result into the 2nd
+spot.  Very close, though!
+
+Since problem 5 is a translation to machine code of problem 4, and you have
+translated that correctly, you earn full credit for that one, with the small
+problem that the very last line should be "C000000A" instead of "C0000009",
+since there are eleven lines in the program, numbered zero through 10, and
+the last line is number 10, which is an "A" in hex.
+
+Gentle reminder:  Your code should be indented so that the mnemonics line up
+and so that there is a nice margin where the labels will go.  Also, ONLY the
+labels should have the ":" at the end, NOT the instruction mnemonics.  Here's
+an example of re-formatting your code:
+
+      fib1:       40
+      fib2:       60
+      result:     0
+      Limit :     40
+      start:      LOAD        fib1
+                  WRITE       40
+                  DIV         5
+                  SUB         limit
+       ...
+
+If you follow every instruction mnemonic with a colon, the assembler will be
+fooled into thinking everything is a label and there will be no executable
+instructions in the program's machine code.
+
+For problem 6, the problem states you should read the number values from the
+data port at 0x100.  This means picking 40 and 60 as your numbers, while it
+is a good starting point for understanding, is not the way the program should
+work.  You need "READ" instructions to read from the port, and you need both
+"STORE" instructions to save the values as well as label locations to store
+them into.  Here is a code snippet of what I mean:
+
+      a:          0
+      b:          0
+      fetch:      READ     0x100
+                  STORE    a
+                  READ     0x100
+                  STORE    b
+
+Now "a" and "b" have the two numbers you need to operate with.  A gentle
+reminder:  use meaninful names for storage, just like you would with your
+variables in any language.  You call yours "fib1" and "fib2" here, but this
+is "GCD" not "FIBONACCI" so those names aren't really appropriate.
+
+As far as the calculation goes, you are on the right track, but you're not
+*quite* there.  The actual calculation should be:
+
+         gcd(a, b) = a if b = 0 else gcd(b, a mod b)
+
+This means you need to do a "MOD" operation, then you need to put "a" into
+"b" and the result of the MOD into "a" for the next loop iteration.
+
+For problem 7, the solution should be more like this:
+
+      XOR     0x30AA     ; acc holds a xor x
+      STORE   t          ; t holds a xor x
+      XOR     0x30AA     ; acc holds (a xor x) xor x, which is a
+      STORE   0x30AA     ; 30AA holds a
+      XOR     t          ; now accumulator holds a xor (a xor x), which is x
+
+For problem 8, you need TWO jump instructions, since there are TWO conditions
+you are tracking.  Think in terms of "if( x >= 0 )" ~ there is one condition
+for x > 0, and one condition for x = 0.  So you need two jump instructions,
+"JGZ" and "JZ".
+
+Problem 9 is 100% right!  GOOD WORK!
+
+All-in-all, a worthy effort on some very confusing things.
+
+========================================================
+SEMESTER SCORE SO FAR:
+
+   homework01 ~ 100.00% of  5 points =  5.00 points
+   homework02 ~ 100.00% of  5 points =  5.00 points
+   homework03 ~  86.96% of  5 points =  4.35 points
+   homework04 ~  92.22% of  5 points =  4.61 points
+                                total: 18.96 out of 20.0 = 94.81%
+                                which is an A
+
+Keep up the good work!
+
+Here's the content of the e-mail for your reference:
+
+For these six problems [problem 3a through 3f], all that is required is a
+single logic instruction with the proper bit mask to achieve the result.  I
+will work the first one for you for free so you can see what is intended.
+
+We are looking for a logic instruction and associated bit mask to "clear"
+[meaning "make zero"] all of the even-numbered bits in a 32-bit word.
+"Even-numbered" means bits 0, 2, 4, 6, 8, 10, and so on up to bit 30,
+counting from the right-most or "least-significant" bit [LSB].  The problem
+assumes that we have some value, perhaps in a register or in memory, and we
+will perform some logic operation, AND, OR, NOT, XOR, or whatever, with a
+"bit mask", a pattern of ones and zeros, so that we will end up with all
+even-numbered bits cleared to zero.
+
+Remember that the AND operation on two bits will only produce a "1" if both
+inputs are "1", and a zero otherwise, we can use that operation to
+accomplish the task.  The associated bit mask, in this case, is the actual
+value we are looking for, which is, in hex, "0xAAAAAAAA".  In binary, that
+would be [of course]:
+
+     1010 1010 1010 1010 1010 1010 1010 1010
+
+If the starting value is:
+
+     1111 1000 0010 1010 1001 1110 0111 1111
+
+for example, the ANDing operation with our bit mask will produce:
+
+         1111 1000 0010 1010 1001 1110 0111 1111
+  AND    1010 1010 1010 1010 1010 1010 1010 1010
+         ---------------------------------------
+         1010 1000 0010 1010 1000 1010 0010 1010
+          ? ?  ? ?  ? ?  ? ?  ? ?  ? ?  ? ?  ? ?
+             [even numbered bits all cleared]
+
+So the answer the problem is seeking is:
+
+     AND with 0xAAAAAAAA
+
+The other five problems are similar, using AND, OR, and XOR type operations
+and the appropriate bit masks, to obtain the result.
