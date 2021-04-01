@@ -1,4 +1,4 @@
-// NOTE: Professor, if for whatever reason you are grading this now, just know that we are still working on it.
+// NOTE: Professor, if for whatever reason you are grading this now, just know that I still have no.2 to modify a little.
 
 ////////////////////////////////
 // Below is for question no.1 //
@@ -28,7 +28,54 @@ int main() {
 // Below is for question no.2 //
 ////////////////////////////////
 
+#include <stdio.h>
+#include <stdlib.h>
 
+int main() {
+
+    int num , hexCount;
+    char hex [8] = {0,0,0,0,0,0,0,0};
+    printf( " Enter a decimal number: " ) ;
+    scanf( "%d", &num ) ;
+    hexCount = 0 ;
+
+    while( num > 0 ) {
+
+        switch( num % 16 ) {
+            case 10 :
+              hex [hexCount] = 'A' ;
+              break ;
+            case 11 :
+              hex [hexCount] = 'B'; 
+              break ;
+            case 12 :
+              hex [hexCount] = 'C' ;
+              break ;
+            case 13 :
+              hex [hexCount] = 'D';
+              break ;
+            case 14 :
+              hex [hexCount] = 'E' ;
+              break ;
+            case 15 :
+              hex [hexCount] = 'F';
+              break ;
+            default :
+              hex [hexCount] = (num%16) + 0x30 ;
+        }
+
+    num /= 16 ;
+    hexCount++ ;
+    }
+
+    printf("The Hexadecimal value ->  0x0000" ) ; //how to make the leading zeroes appear automatically?
+    for( int i = 0; i < 8-1; i++){
+
+        printf("%c" , hex[i]);
+    }
+
+    return 0;
+}
 
 ////////////////////////////////
 // Below is for question no.3 //
@@ -59,35 +106,30 @@ int main(int n) {
 // Below is for question no. 4//
 ////////////////////////////////
 
-4) This one compiles but for some reason it isn't counting the seconds
-
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
-int main () {
-    clock_t start_t, end_t, total_t;
+int main()
+{
     char enter1, enter2;
-    printf ("This program will test how long you can hold your breath. \n");
-
-    while (1) {
-        printf("Press enter to start the timer. \n");
-        enter1 = getchar();
-        if(enter1 == 0x0A){
-            start_t = clock();
-            break;
-        }
+    time_t start, end;
+    
+    printf("Press enter when you're ready to hold your breath");
+    enter1 = getchar();
+    if (enter1 == 0x0A){
+        start = time(NULL);
+        printf("and press enter a second time when you exhale.. ");
+    }
+    
+    enter2 = getchar();
+    if (enter2 == 0x0A){
+        end = time(NULL);
     }
 
-    while (1) {
-        printf("Press enter when you can't hold your breath any longer");
-        enter2 = getchar();
-        if (enter2 == 0x0A) {
-            end_t = clock();
-            break;
-        }
-    }
-    total_t = (end_t - start_t) * 1000 / CLOCKS_PER_SEC;
-    printf("In seconds, you held your breath for %f\n", total_t);
+    int time = (end - start);
+    printf("you held your breath for %i seconds", time);
+    exit(0);
 }
 
 /////////////////////////////////
@@ -103,7 +145,7 @@ int main()
     char path[100];
 
     char ch;
-    int characters;
+    int wordCount;
 
 
     //Prompt user to input file name search for
@@ -124,19 +166,18 @@ int main()
     }
 
     // to count no. of characters
-    characters = 0;
+    wordCount = 1;
     while ((ch = fgetc(file)) != EOF)
     {
-        if (ch != ' ')
+        if (ch == ' ' || ch == '\n')
         {
-            characters++;
+            words++;
         }
-    
     }
 
     //Result of counting
     printf("\n");
-    printf("Total number of characters = %d\n", characters);
+    printf("Total number of words = %d\n", words);
 
     //Closes file
     fclose(file);
