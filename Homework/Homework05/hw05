@@ -123,7 +123,7 @@ int main()
         exit(EXIT_FAILURE);
     }
 
-    // to count words and cha
+    // to count no. of characters
     characters = 0;
     while ((ch = fgetc(file)) != EOF)
     {
@@ -135,7 +135,7 @@ int main()
     
     }
 
-    //Character counts
+    //Result of counting
     printf("\n");
     printf("Total number of characters = %d\n", characters);
 
