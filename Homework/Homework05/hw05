@@ -127,7 +127,6 @@ int main()
     characters = 0;
     while ((ch = fgetc(file)) != EOF)
     {
-        int i = 0;
         if (ch != ' ')
         {
             characters++;
