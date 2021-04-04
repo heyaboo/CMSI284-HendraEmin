@@ -27,6 +27,8 @@ int main() {
 // Below is for question no.2 //
 ////////////////////////////////
 
+//We couldn't get to automatically print the leading zeros
+
 #include <stdio.h>
 #include <stdlib.h>
 
