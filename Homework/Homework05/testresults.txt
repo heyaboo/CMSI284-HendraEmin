@@ -1,0 +1,32 @@
+. 
+"running tests on dec2bin" 
+Enter the decimal you want to convert: 
+The Binary Num of the given decimal number is = 10010Enter the decimal you want to convert: 
+The Binary Num of the given decimal number is = 101Enter the decimal you want to convert: 
+The Binary Num of the given decimal number is = 11110001001000000Enter the decimal you want to convert: 
+The Binary Num of the given decimal number is = 1111111111111111Enter the decimal you want to convert: 
+The Binary Num of the given decimal number is = 111010010000000000000000000000Enter the decimal you want to convert: 
+The Binary Num of the given decimal number is = 1000000000000000001001000110100. 
+"running tests on dec2hex" 
+ Enter a decimal number: The Hexadecimal value ->  0x0000 Enter a decimal number: The Hexadecimal value ->  0x00005 Enter a decimal number: The Hexadecimal value ->  0x00001E240 Enter a decimal number: The Hexadecimal value ->  0x0000FFFF Enter a decimal number: The Hexadecimal value ->  0x00003A400000 Enter a decimal number: The Hexadecimal value ->  0x000040001234 Enter a decimal number: The Hexadecimal value ->  0x00005 Enter a decimal number: The Hexadecimal value ->  0x00001E240 Enter a decimal number: The Hexadecimal value ->  0x0000FFFF Enter a decimal number: The Hexadecimal value ->  0x00003A400000 Enter a decimal number: The Hexadecimal value ->  0x000040001234. 
+"running tests on timesTables" 
+    |
+    |   2
+   2|   4
+    |   2
+   2|   4
+    |   2
+   2|   4
+    |   2
+   2|   4
+    |   2
+   2|   4
+. 
+"running test on holdit" 
+Press enter when you're ready to hold your breathand press enter a second time when you exhale.. you held your breath for 8 seconds. 
+"running test on wordcount" 
+Enter a file to count the number of characters in a file: 
+Unable to open file.
+Please check if file exists.
+Enter a file to count the number of characters in a file: 
+Total number of words = 397

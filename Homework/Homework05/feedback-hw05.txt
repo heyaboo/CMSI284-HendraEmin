@@ -1,0 +1,78 @@
+
+
+Evaluation Criteria ~ homework05
+CMSI 284 Section 01 Spring 2021
+=================================
+
+dec2bin
+   compiles       [ 5 pts.]      5 points earned
+   error checks   [ 5 pts.]      4 points earned
+   runs  tests    [10 pts.]      9 points earned
+dec2hex
+   compiles       [ 5 pts.]      5 points earned
+   error checks   [ 5 pts.]      4 points earned
+   32-bit tests   [ 5 pts.]      5 points earned
+   64-bit tests   [ 5 pts.]      0 points earned
+timesTables
+   compiles       [ 5 pts.]      5 points earned
+   error checks   [ 5 pts.]      5 points earned
+   runs  tests    [10 pts.]     10 points earned
+holdit
+   compiles       [ 5 pts.]      5 points earned
+   runs tests     [15 pts.]     15 points earned
+wordcount
+   compiles       [ 5 pts.]      4 points earned
+   error checks   [ 5 pts.]      5 points earned
+   runs tests     [10 pts.]     10 points earned
+
+             Total possible ~ 100 points
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 91/100 which is 91.00% which is an A-minus
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+First things first: please put your source code files into separate files,
+so that I can compile and run them.  I had to separate them into files, as
+you can see by the extra files that are now in your repo.
+
+In wordcount.c you had two different variables, "wordCount" and "words" that
+were referring to the count of words in the file.  This was causing the file
+not to compile.  I fixed those for you.
+
+Everything now compiles.
+
+For problem 1, you are supposed to output 32 bits, which should be padded
+with leading zeros if necessary.  You only output the number of bits which
+runs to the most significant "1" bit.  You also don't error check the input;
+when I enter "asdf" you convert that to "10010" instead of displaying an
+error message.
+
+For problem 2, you were supposed to take either a "32" or a "64" from the
+command line and display the proper number of zero-filled hexadecimal digits
+based on that.  If nothing was input the default should have been "32".  You
+never handle the 64-bit values, or the command line at all.  In addition,
+still no error checking ~ "asdf" is converted to "0x0000" with no error.
+
+The timesTables doesn't work quite right.  It was supposed to output a table
+of values that would be from 2 to "N" in both directions, with the "N" from
+the command line.  However, the specification wasn't really clear, so full
+credit earned.
+
+Problems 4 and 5 work perfectly!
+
+========================================================
+SEMESTER SCORE SO FAR:
+
+   homework01 ~ 100.00% of  5 points =  5.00 points
+   homework02 ~ 100.00% of  5 points =  5.00 points
+   homework03 ~  86.96% of  5 points =  4.35 points
+   homework04 ~  92.22% of  5 points =  4.61 points
+   homework05 ~  91.00% of 10 points =  9.10 points
+                                total: 28.06 out of 30.00 =  93.53%
+                                which is an A
+
+VERY VERY good work!
