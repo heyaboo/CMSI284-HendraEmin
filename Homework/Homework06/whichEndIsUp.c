@@ -4,7 +4,7 @@
 #define LITTLE_ENDIAN 1
  
 int networkByteOrder() {
-        short int num = 321;
+        short int num = 0xABCD;
         char* b = (char*) &num;
         return (b[0] ? LITTLE_ENDIAN : BIG_ENDIAN);
 }
