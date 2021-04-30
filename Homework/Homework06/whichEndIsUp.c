@@ -12,5 +12,5 @@ int networkByteOrder() {
 int main() {
         int order = networkByteOrder();
         printf("Our Stanley/Penguin machine is a %s\n", order == LITTLE_ENDIAN ? "Little Endian" : "Big Endian");
-        return r;
+        return order;
 }
