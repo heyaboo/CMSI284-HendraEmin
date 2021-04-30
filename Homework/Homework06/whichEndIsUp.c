@@ -4,8 +4,8 @@
 #define LITTLE_ENDIAN 1
  
 int networkByteOrder() {
-        short int word = 0x0001;
-        char* b = (char*) &word;
+        short int num = 321;
+        char* b = (char*) &num;
         return (b[0] ? LITTLE_ENDIAN : BIG_ENDIAN);
 }
  
