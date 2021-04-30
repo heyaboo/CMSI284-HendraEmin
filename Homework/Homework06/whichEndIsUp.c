@@ -11,6 +11,6 @@ int networkByteOrder() {
  
 int main() {
         int r = networkByteOrder();
-        printf("%s\n", r == LITTLE_ENDIAN ? "Little Endian" : "Big Endian");
+        printf("Our Stanley/Penguin machine is a %s\n", r == LITTLE_ENDIAN ? "Little Endian" : "Big Endian");
         return r;
 }
