@@ -1,0 +1,84 @@
+
+
+Evaluation Criteria ~ homework06
+CMSI 284 Section 01 Spring 2021
+=================================
+
+FINDGCD.NASM
+   assembles            [5 pts.] 5 points earned
+   runs                 [5 pts.] 5 points earned
+   output correct       [2 pts.] 2 points earned
+GCDFINDER
+   nasm file assembles  [5 pts.] 0 points earned
+   gcdFinder.c compiles [5 pts.] 5 points earned
+   link both files      [5 pts.] 0 points earned
+   nasm returns value   [5 pts.] 0 points earned
+   output correct       [2 pts.] 0 points earned
+PARITYGEN
+   nasm assembles       [5 pts.] 5 points earned
+   nasm links           [5 pts.] 5 points earned
+   nasm runs            [5 pts.] 5 points earned
+   output correct       [2 pts.] 2 points earned
+WHICHENDISUP
+   compiles no errors   [5 pts.] 5 points earned
+   runs no errors       [5 pts.] 5 points earned
+MAKENBOC.C
+   compiles no errors   [5 pts.] 0 points earned
+   uses previous func.  [5 pts.] 0 points earned
+   tester compiles      [5 pts.] 0 points earned
+   tester runs          [5 pts.] 0 points earned
+   output correct       [2 pts.] 0 points earned
+MAKENBO.NASM
+   assembles            [5 pts.] 0 points earned
+   link both files      [5 pts.] 0 points earned
+   calls "C" function   [5 pts.] 0 points earned
+   output correct       [2 pts.] 0 points earned
+
+Total possible points 100
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 44.00/100.00 which is 44% which is not your best work...
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+Problem #1 didn't assemble at first.  You forgot the underscores in front of
+   the calls to "_printf" and "_scanf".  I fixed those for you and now it is
+   in good shape.  Full credit earned.
+
+Problem #2 your "C" code compiles fine by itself, but it doesn't call any
+   "nasm" function.  The way your code is structured, there is not a function
+   in your nasm code for gcd since it is a "main" program.  You need a second
+   nasm file with just the functin in it, as is specified by the problem text.
+   You earn partial credit for the "C" file.
+
+Problem #3, there were several minor problems here.  You need a "global" at the
+   top of the file that specifies the "_main" for this program.  Then you need
+   an "extern" right after that to declare the "_printf" function you'll call
+   from the "C" library.  Then there was a missign comma at line 26.  I added
+   all that for you and now it assembles and runs just fine.  Full credit is
+   earned for this one.
+
+Problem #4 works perfectly.
+
+Problem #5 you seem to be missing the "makeNBOC.c" and "makeNBOCtest.c" files
+   which are required for this problem.  Hmmmm...
+
+Problem #6, without the function file from problem #5, not much to do here.
+   The file you DID put here doesn't assemble.
+
+========================================================
+SEMESTER HOMEWORK TOTALS:
+
+   homework01 ~ 100.00% of  5 points =  5.00 points
+   homework02 ~ 100.00% of  5 points =  5.00 points
+   homework03 ~  86.96% of  5 points =  4.35 points
+   homework04 ~  92.22% of  5 points =  4.61 points
+   homework05 ~  91.00% of 10 points =  9.10 points
+   homework06 ~  44.00% of 15 points =  6.60 points
+                       semester total: 34.66 out of 45.00 = 77.02%
+                             which is a C
+
+This was a difficult assignment, and you did pretty well on it.

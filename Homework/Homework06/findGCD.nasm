@@ -17,21 +17,21 @@ _main:
         push           eax                  ; save registers
         push           ebx
         push           message1
-        call           printf
+        call           _printf
 
         add            esp, 4               ; remove parameters
         push           integer1             ; address of integer1 (2nd parameter)
         push           formatin
-        call           scanf
+        call           _scanf
 
         add            esp, 8               ; remove parameters
         push           message2
-        call           printf
+        call           _printf
 
         add            esp, 4               ; remove parameters
         push           integer2             ; address of integer2
         push           formatin
-        call           scanf
+        call           _scanf
 
         add            esp, 8               ; remove parameteres
 
@@ -41,13 +41,13 @@ gcd0:
         div            ebx
         mov            eax, ebx
         mov            ebx, edx
-        test           ebx, ebx             ; loop if remainder is not equal 0 
+        test           ebx, ebx             ; loop if remainder is not equal 0
         jnz            gcd0
-       
+
 ;                                           ; ax = gcd
 
         push           eax
         push           message
-        call           printf
+        call           _printf
         add esp , 8
         ret
